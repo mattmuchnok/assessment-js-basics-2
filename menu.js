@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: `Large 1-Topping Pizza`,
+    price: 10,
+    category: `Entree`,
+    popularity: 9,
+    rating: 4.3,
+    tags: [`great value`, `families`, `parties`]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+// console.log(pizza.tags[1]) // Second value of a zero-index array
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza
+// console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+let {category} = pizza
+// console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +97,7 @@
 */
 
 //CODE HERE
-
+let foodArr = [`Large 1-Topping Pizza`, 13, `Entree`, 6, 3.7, [`great taste`, `kids`, `snack`]]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -104,8 +113,7 @@
 */
 
 //CODE HERE
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+// const filteredFood = foodArr.filter()
 
 
 
@@ -149,7 +157,10 @@
 */
 
 //CODE HERE
-
+// const filterByProperty = (property, number, type) => {
+//     let filteredArray = []
+//     foodArr.filter
+// }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +170,4 @@
 */
 
 //CODE HERE
+// console.log(filterByProperty(`rating`, 8, `below`))
