@@ -60,7 +60,7 @@ const pizza = {
 */
 
 //CODE HERE
-// console.log(pizza.tags[1]) // Second value of a zero-index array
+// console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -70,7 +70,7 @@ const pizza = {
 */
 
 //CODE HERE
-let {price} = pizza
+const {price} = pizza
 // console.log(price)
 
 /*
@@ -81,7 +81,7 @@ let {price} = pizza
 */
 
 //CODE HERE
-let {category} = pizza
+const {category} = pizza
 // console.log(category)
 
 //////////////////PROBLEM 3////////////////////
@@ -97,7 +97,49 @@ let {category} = pizza
 */
 
 //CODE HERE
-let foodArr = [`Large 1-Topping Pizza`, 13, `Entree`, 6, 3.7, [`great taste`, `kids`, `snack`]]
+
+//THIS NEEDS TO BE AN ARRAY WITH 5 OBJECTS *********
+const foodArr = [
+    {
+        name: `Pepperoni`,
+        price: 15,
+        category: `Entree`,
+        popularity: 9,
+        rating: 4.3,
+        tags: [`great value`, `families`, `parties`]
+    },
+    {
+        name: `Wings`,
+        price: 14,
+        category: `Appetizer`,
+        popularity: 8,
+        rating: 4.4,
+        tags: [`spicy`, `snack`, `parties`]
+    },
+    {
+        name: `Mushroom`,
+        price: 13,
+        category: `Entree`,
+        popularity: 6,
+        rating: 3.0,
+        tags: [`new`, `families`, `healthy`]
+    },
+    {
+        name: `Spinach`,
+        price: 11,
+        category: `Entree`,
+        popularity: 5,
+        rating: 3.8,
+        tags: [`vegan`, `families`, `healthy`]
+    },    {
+        name: `Pineapple`,
+        price: 16,
+        category: `Entree`,
+        popularity: 4,
+        rating: 3.7,
+        tags: [`great taste`, `families`, `fruit`]
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -112,8 +154,10 @@ let foodArr = [`Large 1-Topping Pizza`, 13, `Entree`, 6, 3.7, [`great taste`, `k
     your food objects has.
 */
 
-//CODE HERE
-// const filteredFood = foodArr.filter()
+//CODE HERE *******
+const filteredFood = foodArr.filter(meal => meal.tags.includes(`fruit`))
+
+// console.log(filteredFood)
 
 
 
@@ -157,10 +201,16 @@ let foodArr = [`Large 1-Topping Pizza`, 13, `Entree`, 6, 3.7, [`great taste`, `k
 */
 
 //CODE HERE
-// const filterByProperty = (property, number, type) => {
-//     let filteredArray = []
-//     foodArr.filter
-// }
+const filterByProperty = (property, number, type) => {
+    const filteredArray = foodArr.filter(meal => {
+        if (type === `above`) {
+            return meal[property] > number
+        } else if (type === `below`) {
+            return meal[property] < number
+        }
+    })
+    return filteredArray
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -170,4 +220,4 @@ let foodArr = [`Large 1-Topping Pizza`, 13, `Entree`, 6, 3.7, [`great taste`, `k
 */
 
 //CODE HERE
-// console.log(filterByProperty(`rating`, 8, `below`))
+console.log(filterByProperty(`popularity`, 8, `below`))

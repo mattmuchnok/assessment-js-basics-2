@@ -66,7 +66,8 @@ const empOne = new Employee(`Jess`, [`weekday mornings`, `weekday afternoons`])
 
 //CODE HERE
 const empTwo = {
-    ...empOne
+    ...empOne,
+    name: `Nick`
 }
 
 // empTwo.name(`Nick`)
